@@ -1,0 +1,31 @@
+{
+  "name": "gulp-pipemaker",
+  "version": "0.0.1",
+  "description": "A web gui to help you make your gulp scripts",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puranjayjain/gulp-pipemaker.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulp-pipemaker",
+    "pipemaker",
+    "gui",
+    "web",
+    "gulp",
+    "maker"
+  ],
+  "author": "Puranjay Jain <puranjay.jain@st.niituniversity.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/puranjayjain/gulp-pipemaker/issues"
+  },
+  "homepage": "https://puranjayjain.github.io/gup-pipemaker",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

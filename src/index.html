@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <title>Gulp PipeMaker</title>
+  <link rel="stylesheet" href="../semantic/dist/semantic.css">
+  <style>
+  /*move them to scss*/
+  .pm-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .pm-main .pm-item .image,
+  .pm-main .pm-item .content {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pm-main .pm-item .image {
+    height: 4rem;
+    width: auto;
+    margin-right: 1rem;
+  }
+  /*center container*/
+  .pm--container {
+    flex-grow: 1;
+  }
+  /*not to shrink the element*/
+  .pm--noshrink {
+    flex-shrink: 0;
+  }
+  /*class to reset margin top*/
+  .pm--mtop {
+    margin-top: 0 !important;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="ui top menu attached">
+    <div class="ui red icon top left pointing dropdown button">
+      <i class="sidebar icon"></i>
+      <div class="menu">
+        <div class="item">
+          <i class="file code outline icon"></i>
+          New File
+        </div>
+        <div class="ui divider"></div>
+        <div class="item">
+          <i class="announcement icon"></i>
+          What's New
+        </div>
+        <div class="item">
+          <i class="users icon"></i>
+          About Us
+        </div>
+        <div class="item">
+          <i class="help icon"></i>
+          Help
+        </div>
+      </div>
+    </div>
+    <button class="ui blue compact labeled icon button">
+      <i class="download icon"></i>
+      Download
+    </button>
+    <div class="right menu">
+      <div class="ui right aligned category search item">
+        <div class="ui transparent icon input">
+          <input class="prompt" type="text" placeholder="Search Pipes...">
+          <i class="search link icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pm-main ui attached">
+    <div class="ui vertical menu attached pm--noshrink">
+      <div class="item pm-item">
+        <img class="ui mini circular image" src="images/logo.png">
+        <div class="content">
+          <div class="ui sub red header">Pipemaker</div>
+          v0.0.1
+        </div>
+      </div>
+      <div class="ui selection dropdown item">
+        <input type="hidden" name="Gulp version">
+        <i class="dropdown icon"></i>
+        <div class="default text">Gulp version</div>
+        <div class="menu">
+          <div class="item" data-value="0">^3.9.1</div>
+          <div class="item" data-value="1">4.0.0#alpha</div>
+        </div>
+      </div>
+      <a class="item pm-popup" data-content="Adds a task to the script">
+        Add Pipeline
+        <i class="add circle icon"></i>
+      </a>
+      <a class="item pm-popup" data-content="Adds a src or source path (stream start)">
+        Add Faucet
+        <i class="add circle icon"></i>
+      </a>
+      <a class="item pm-popup" data-content="Adds a dest or destination path to ouput the file (stream end for last dest)">
+        Add Sink
+        <i class="add circle icon"></i>
+      </a>
+      <a class="item pm-popup" data-content="Adds a pipe to the stream">
+        Add Pipe
+        <i class="add circle icon"></i>
+      </a>
+    </div>
+    <div class="ui container segment pm--container pm--mtop">
+      <div class="ui active inverted dimmer">
+        <div class="ui text loader">Loading</div>
+        Initializing the awesome
+      </div>
+      <p>
+
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <div class="ui vertical menu pm--noshrink pm--mtop">
+      <div class="item ui blue header">
+        Properties
+      </div>
+      <a class="item">Features</a>
+      <a class="item">Testimonials</a>
+      <a class="item">Sign-in</a>
+    </div>
+  </div>
+  <div class="ui inverted segment attached">
+    <h4 class="ui blue header">Output</h4>
+    <pre>
+      <code>
+        some code to highlight later
+      </code>
+    </pre>
+  </div>
+  <div class="ui segment attached">
+    gulp-pipemaker &copy; 2016 Puranjay Jain, MIT Licensed
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="../semantic/dist/semantic.min.js"></script>
+  <script type="text/javascript">
+  // activating dropdown
+  $('.ui.dropdown').dropdown();
+  // activating popups
+  $('.pm-popup').popup();
+  </script>
+</body>
+
+</html>
