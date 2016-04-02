@@ -51,12 +51,12 @@
   }
   /*small sized image*/
   .pm-image {
-    display: block;
+    display: block !important;
     cursor: pointer;
   }
   .pm-image-h {
     margin-top: 9px;
-    display: inline-block;
+    display: inline-block !important;
     vertical-align: middle;
     margin-right: -3px;
   }
@@ -218,33 +218,80 @@
         <i class="add circle icon"></i>
       </a>
     </div>
-    <div class="ui container attached segment pm--container pm--mtop">
-      <div class="ui segment">
-        <img class="pm-image pm-image--tap" src="images/tap.png" alt="tap" />
-        <div class="pm-pipe"></div>
-        <div class="pm-pipe"></div>
-        <img class="pm-image pm-image--dest" src="images/dest-pipe.png" alt="dest" />
-        <img class="pm-image pm-image--dest" src="images/dest.png" alt="dest" />
+    <div class="ui container attached segment three column grid pm--container pm--mtop">
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui sub red header">Task1</div>
+          </div>
+          <div class="content">
+            <img class="pm-image pm-image--tap" src="images/tap.png" alt="tap" />
+            <div class="pm-pipe"></div>
+            <div class="pm-pipe"></div>
+            <img class="pm-image pm-image--dest" src="images/dest-pipe.png" alt="dest" />
+            <img class="pm-image pm-image--dest" src="images/dest.png" alt="dest" />
+          </div>
+        </div>
       </div>
-      <div class="ui segment">
-        <div class="pm-pipe-h"></div>
-        <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
-        <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
-        <img class="pm-image pm-image-h" src="images/dest-h.png" alt="dest" />
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui sub red header">Task2</div>
+          </div>
+          <div class="content">
+            <div class="pm-pipe-h"></div>
+            <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+            <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+            <img class="pm-image pm-image-h" src="images/dest-h.png" alt="dest" />
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui sub red header">Task3</div>
+          </div>
+          <div class="content">
+            <div class="pm-pipe-h"></div>
+            <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+            <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+            <img class="pm-image pm-image-h" src="images/dest-h.png" alt="dest" />
+          </div>
+          <div class="extra content">
+            <span class="left floated star">
+              <i class="edit icon"></i>
+              Edit
+            </span>
+            <span class="right floated delete">
+              <i class="delete icon"></i>
+              Delete
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="ui sub red header">Task3</div>
+          </div>
+          <div class="content">
+            <div class="pm-pipe-h"></div>
+            <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+            <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+            <img class="pm-image pm-image-h" src="images/dest-h.png" alt="dest" />
+          </div>
+        </div>
       </div>
     </div>
     <div class="ui vertical menu pm--noshrink pm--mtop">
       <div class="item ui blue header">
         Properties
       </div>
-      <!-- <a class="item"> -->
-      <div class="ui labeled input">
-        <a class="ui label">
-          Label
-        </a>
-        <input type="text" placeholder="Src">
-      </div>
-      <!-- </a> -->
+      <a class="item">
+        <div class="ui input">
+          <input type="text" placeholder="Src">
+        </div>
+      </a>
       <a class="item">Testimonials</a>
       <a class="item">Sign-in</a>
     </div>
