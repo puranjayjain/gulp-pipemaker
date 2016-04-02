@@ -47,6 +47,84 @@
   /*center container*/
   .pm--container {
     flex-grow: 1;
+    min-height: 70vh;
+  }
+  /*small sized image*/
+  .pm-image {
+    display: block;
+    cursor: pointer;
+  }
+  .pm-image-h {
+    margin-top: 9px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -3px;
+  }
+  .pm-image--tap {
+    margin-bottom: -4px;
+  }
+  /*dest image*/
+  .pm-image--dest {
+    margin-left: 78px;
+  }
+  /*a normal pipe*/
+  .pm-pipe {
+    position: relative;
+    margin-left: 79px;
+    width: 19px;
+    height: 35px;
+    background-color: #FD2368;
+    cursor: pointer;
+  }
+  .pm-pipe:first-of-type:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    background-color: #663349;
+    width: calc(100% + 10px);
+    height: 5px;
+    border-radius: 5px;
+  }
+  .pm-pipe:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    background-color: #663349;
+    width: calc(100% + 10px);
+    height: 5px;
+    border-radius: 5px;
+  }
+  /*horizontal pipe*/
+  .pm-pipe-h {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    background-color: #FD2368;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  .pm-pipe-h:first-of-type:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    background-color: #663349;
+    width: 5px;
+    height: calc(100% + 10px);
+    border-radius: 5px;
+  }
+  .pm-pipe-h:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #663349;
+    height: calc(100% + 10px);
+    width: 5px;
+    border-radius: 5px;
   }
   /*not to shrink the element*/
   .pm--noshrink {
@@ -98,7 +176,7 @@
     </div>
   </div>
   <div class="pm-main ui attached">
-    <div class="ui vertical menu attached pm--noshrink">
+    <div class="ui vertical menu attached  pm--noshrink">
       <div class="item pm-item">
         <img class="ui mini circular image" src="images/logo.png">
         <div class="content">
@@ -131,24 +209,42 @@
         Add Pipe
         <i class="add circle icon"></i>
       </a>
+      <a class="item pm-popup" data-content="Adds a watch to the stream">
+        Add Meter
+        <i class="add circle icon"></i>
+      </a>
+      <a class="item pm-popup" data-content="Performs tasks in series">
+        Add Pipe Spliter
+        <i class="add circle icon"></i>
+      </a>
     </div>
-    <div class="ui container segment pm--container pm--mtop">
-      <div class="ui active inverted dimmer">
-        <div class="ui text loader">Loading</div>
-        Initializing the awesome
+    <div class="ui container attached segment pm--container pm--mtop">
+      <div class="ui segment">
+        <img class="pm-image pm-image--tap" src="images/tap.png" alt="tap" />
+        <div class="pm-pipe"></div>
+        <div class="pm-pipe"></div>
+        <img class="pm-image pm-image--dest" src="images/dest-pipe.png" alt="dest" />
+        <img class="pm-image pm-image--dest" src="images/dest.png" alt="dest" />
       </div>
-      <p>
-
-      </p>
-      <p>
-        
-      </p>
+      <div class="ui segment">
+        <div class="pm-pipe-h"></div>
+        <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+        <img class="pm-image pm-image-h" src="images/dest-pipe-h.png" alt="dest" />
+        <img class="pm-image pm-image-h" src="images/dest-h.png" alt="dest" />
+      </div>
     </div>
     <div class="ui vertical menu pm--noshrink pm--mtop">
       <div class="item ui blue header">
         Properties
       </div>
-      <a class="item">Features</a>
+      <!-- <a class="item"> -->
+      <div class="ui labeled input">
+        <a class="ui label">
+          Label
+        </a>
+        <input type="text" placeholder="Src">
+      </div>
+      <!-- </a> -->
       <a class="item">Testimonials</a>
       <a class="item">Sign-in</a>
     </div>
